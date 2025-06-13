@@ -390,6 +390,9 @@ body {
 }
 
 @media (max-width: 400px) {
+  #home-section{
+    width: 100%;
+  }
   .hero h1 {
     font-size: 1.5em;
   }
