@@ -218,7 +218,7 @@ function selectOption(selectedIdx, btn) {
     if (i === selectedIdx && selectedIdx !== correctIdx) b.classList.add('incorrect');
   });
   document.getElementById('result').textContent =
-    selectedIdx === correctIdx ? "Correct!" : `Wrong!`;
+    selectedIdx === correctIdx ? "Correct!" : `Incorrect!`;
   setTimeout(() => {
     currentQuestion++;
     if (currentQuestion < questions.length) {
