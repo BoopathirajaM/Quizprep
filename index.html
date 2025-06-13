@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QuizPrep</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Logo -->
+      <link rel="icon" href="logo.jpg" type="image/x-icon" id="icon"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">QuizPrep</div>
+    <ul class="nav-links">
+      <li><a href="#" class="active" id="home-link">Home</a></li>
+      <li><a href="#" id="about-link">About</a></li>
+      <li><a href="#" id="contact-link">Contact</a></li>
+      <div class="theme-toggle">
+        <input type="checkbox" id="checkbox" class="checkbox" />
+        <label for="checkbox" class="checkbox-label">
+          <i class="fa fa-moon"></i>
+          <i class="fa fa-sun"></i>
+          <span class="ball"></span>
+        </label>
+      </div>
+    </ul>
+  </nav>
+  <main id="main-content">
+    <!-- Home Section -->
+    <section id="home-section">
+      <header class="hero">
+        <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=900&q=80" alt="Quiz Banner" class="hero-img">
+        <h1>Welcome to  QuizPrep</h1>
+        <p>Practice previous year questions from top MNCs and prepare for your dream job!</p>
+      </header>
+      <div class="info-card">
+        <h2>How to Use</h2>
+        <ul>
+            <li>This is a FREE online test.</li>
+            <li>Answer the questions within the time limit.</li>
+            <li>Total number of questions: 20</li>
+            <li>Each question carries 1 mark; there are no negative marks.</li>
+            <li>DO NOT refresh the page</li>
+            <li>Get instant feedback on your performance.</li>
+            <li>Track your progress and improve your skills.</li>
+            <h4>All the best!</h4>
+
+        </ul>
+      </div>
+      <section class="topics-section">
+        <h2>Select a Topic</h2>
+        <div class="topics-list">
+          <div class="topic-card" data-topic="Time_and_work">
+            <img src="zoho.png" alt="#" class="topic-img">
+            <h3>Time and work</h3>
+            <p>Previous year  questions </p>
+            <button class="start-btn">Start</button>
+          </div>
+          <div class="topic-card" data-topic="Networking">
+            <img src="TCS.png" alt="TCS" class="topic-img">
+            <h3>Networking</h3>
+            <p>Previous year  questions</p>
+            <button class="start-btn">Start</button>
+          </div>
+          <div class="topic-card" data-topic="Percentage">
+            <img src="percentage.webp" alt="Amazon" class="topic-img">
+            <h3>Percentage </h3>
+            <p>Previous year  questions</p>
+            <button class="start-btn">Start</button>
+          </div>
+          <div class="topic-card" data-topic="Logical_Reasoning">
+            <img src="logic.png" alt="Microsoft" class="topic-img">
+            <h3>Logical Reasoning</h3>
+            <p>Previous year questions</p>
+            <button class="start-btn">Start</button>
+          </div>
+          <div class="topic-card" data-topic="Number_Series">
+            <img src="num.png" alt="Apple" class="topic-img">
+            <h3>Number Series</h3>
+            <p>Previous year  questions</p>
+            <button class="start-btn">Start</button>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- Quiz Section (hidden by default) -->
+    <section id="quiz-section" style="display:none;">
+      <div id="quiz-container">
+        <h2 id="quiz-title"></h2>
+        <div id="timer-container">Time: <span id="time">00:00</span></div>
+        <div class="question" id="question"></div>
+        <p id="qn"></p>
+        <div id="options"></div>
+        <p id="result"></p>
+      </div>
+    </section>
+    <!-- About Section (hidden by default) -->
+    <section id="about-section" style="display:none;">
+      <div class="info-card">
+        <h2>About QuizPrep</h2>
+        <p>
+          QuizPrep helps you practice previous year questions from top MNCs like Zoho, TCS, Amazon, Microsoft, and Apple. <br>
+          We have Unlimited more question 
+          Prepare for your dream job with real interview questions, instant feedback, and a professional interface.
+        </p>
+        <h2>Our Mission</h2>
+        <p> At QuizPrep , our mission is to empower students to achieve academic success by providing accessible, effective and engaging study resources. <br>
+          We strive to make learning fun, interactive and rewarding.</p>
+
+        <h2>Join Our Community</h2>
+        <p>Sign up with QuizPrep today and start achieving your academic goals!.</p>
+      </div>
+    </section>
+    <!-- Contact Section (hidden by default) -->
+    <section id="contact-section" style="display:none;">
+      <div class="contact-container">
+    <h2>We'd love to hear from you</h2>
+    <p>Have a suggestion? Found a bug? Delete your account/data?<br>
+      Fill out the form below, and we'll take a look!</p>
+    <form>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" type="text" required>
+      </div>
+      <div class="form-group">
+        <label for="contact-type">Contact</label>
+        <select id="contact-type" name="contact-type" required>
+          <option value="">Select*</option>
+          <option value="General">General</option>
+          <option value="Suggestion">Suggestion</option>
+          <option value="Bug">Bug</option>
+          <option value="Account">Account/Data</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input id="fullname" name="fullname" type="text" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email (optional)</label>
+          <input id="email" name="email" type="email">
+        </div>
+      </div>
+     <div class="captcha-row">
+        <input type="text" name="captcha" placeholder="Captcha" required style="width: 90px;">
+        <span class="captcha-img" id="captchaBox"></span>
+      </div>
+      <button type="submit" id="submit-btn">Submit</button>
+    </form>
+  </div>
+    </section>
+  </main>
+  <footer class="footer">
+    
+    <div>Made with ❤️ by Boopathiraja | © 2025 QYESYS INFO - TECH</div>
+    <div class="icon">
+      <a href="https://github.com/BoopathirajaM/"><i class="fa-brands fa-github"></i></a>
+      <a href="https://facebook.com/BoopathiSankaran"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://instagram.com/mr_innocent_br/"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://twitter.com/BoopathiSankaran"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://wa.me/6374486374"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
