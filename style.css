@@ -241,8 +241,13 @@ body {
   max-width: 700px;
   text-align: center;
 }
+
 #quiz-title, #qn{
   color: var(--primary);
+}
+
+#quiz-container #result{
+  color: var(--text);
 }
 
 #timer-container {
@@ -389,7 +394,7 @@ body {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   #home-section{
     width: 100%;
   }
@@ -510,6 +515,9 @@ body {
       background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
     }
     @media (max-width: 400px) {
+      #home-section{
+        width: 100%;
+      }
       .contact-container {
         padding: 14px 6px 16px 6px;
       }
