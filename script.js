@@ -237,9 +237,9 @@ function showSummary() {
   questions.forEach((q, i) => {
     if (userAnswers[i] === q.answer) score++;
   });
-  let html = `<h2>Quiz Summary</h2>`;
-  html += `<p>Time Taken: <strong>⏳ ${formatTime(totalTime)}</strong></p>`;
-  html += `<p style="font-size:1.2em;"><strong>🎉 Score: ${score} / ${questions.length}</strong></p>`;
+  let html = `<h2 style="color:var(--primary);">Quiz Summary</h2>`;
+  html += `<p style="color:var(--text);">Time Taken: <strong>⏳ ${formatTime(totalTime)}</strong></p>`;
+  html += `<p style="font-size:1.2em; color:var(--primary);"><strong>🎉 Score: ${score} / ${questions.length}</strong></p>`;
   html += `<table border="1" cellpadding="5" style="background-color: white"><tr><th>Q#</th><th>Question</th><th>Your Answer</th><th>Correct Answer</th></tr>`;
   questions.forEach((q, i) => {
     const userIdx = userAnswers[i];
